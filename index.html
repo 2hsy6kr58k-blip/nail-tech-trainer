@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#B76E79" />
+  <meta name="description" content="הדרכת טכנאיות ציפורניים — מדריכים, מנטורית, חנות ומותג אתמר ניילס" />
+  <link rel="manifest" href="manifest.json" />
+  <title>Nail Tech Trainer | אתמר ניילס</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="app-header">
+    <div class="brand-row">
+      <div class="logo-dot" aria-hidden="true"></div>
+      <div>
+        <h1>Nail Tech Trainer</h1>
+        <p id="header-sub">אתמר ניילס · הדרכה בעברית</p>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section id="view-home" class="view active" data-view="home">
+      <div class="hero">
+        <h2>שלום, טכנאית 💅</h2>
+        <p>מדריכים צעד־אחר־צעד, מנטורית מקצועית, וקו מוצרים של <strong>אתמר ניילס</strong> — בלי מצלמה, מוכן לעבודה מהנייד.</p>
+        <button class="btn" data-nav="lessons">למדריכים</button>
+        <button class="btn secondary" data-nav="mentor">שאלי את המנטורית</button>
+      </div>
+      <h3 class="section-title">המשך מהיר</h3>
+      <div class="card-grid" id="home-lessons"></div>
+      <h3 class="section-title">מוצרים מובילים</h3>
+      <div id="home-products"></div>
+      <button class="btn ghost" data-nav="brand" style="margin-top:12px">למסך המותג</button>
+    </section>
+    <section id="view-lessons" class="view" data-view="lessons">
+      <h2 class="section-title">מדריכים</h2>
+      <p class="muted">בחרי מדריך. בכל שלב יופיעו מוצרים רלוונטיים מאתמר ניילס.</p>
+      <div class="chip-row" id="lesson-filters"></div>
+      <div class="lesson-list card-grid" id="lesson-list"></div>
+    </section>
+    <section id="view-lesson" class="view" data-view="lesson">
+      <button class="btn ghost" id="back-to-lessons" type="button">← חזרה למדריכים</button>
+      <h2 class="section-title" id="lesson-title"></h2>
+      <p class="muted" id="lesson-summary"></p>
+      <div class="progress" aria-hidden="true"><span id="lesson-progress"></span></div>
+      <div class="stepper">
+        <button class="btn secondary" id="prev-step" type="button" style="width:auto;min-width:96px">הקודם</button>
+        <span class="step-indicator" id="step-indicator"></span>
+        <button class="btn" id="next-step" type="button" style="width:auto;min-width:96px">הבא</button>
+      </div>
+      <article class="card" id="step-content"></article>
+      <div id="lesson-mistakes"></div>
+    </section>
+    <section id="view-mentor" class="view" data-view="mentor">
+      <h2 class="section-title">מנטורית</h2>
+      <p class="muted">ידע מקצועי בעברית (ללא מפתח API). בעתיד ניתן לחבר xAI/Grok.</p>
+      <div class="quick-q" id="quick-questions"></div>
+      <div class="chat" id="chat-log" aria-live="polite"></div>
+      <div class="chat-input-row">
+        <input id="mentor-input" type="text" placeholder="למשל: איך בונים C‑curve?" autocomplete="off" />
+        <button id="mentor-send" type="button" aria-label="שלחי">➤</button>
+      </div>
+    </section>
+    <section id="view-store" class="view" data-view="store">
+      <h2 class="section-title">חנות</h2>
+      <p class="muted">קטלוג התחלה של <span id="store-brand-name">אתמר ניילס</span> — רכישה בקרוב.</p>
+      <div class="store-grid" id="store-grid"></div>
+      <div class="warn-box" style="margin-top:14px">המחירים במסך המותג הם הערכות שוק. ראו גם BRAND.md.</div>
+    </section>
+    <section id="view-brand" class="view" data-view="brand">
+      <h2 class="section-title">מותג</h2>
+      <p class="muted" id="brand-working-name"></p>
+      <div class="card" style="margin-bottom:12px"><h3>הצעות שמות (7)</h3><div id="brand-names"></div></div>
+      <div class="card" style="margin-bottom:12px"><h3>פלטת צבעים</h3><div class="swatches" id="brand-swatches"></div></div>
+      <div class="card" style="margin-bottom:12px"><h3>טון דיבור</h3><p id="brand-voice"></p></div>
+      <h3 class="section-title">קטלוג ומחירים (₪)</h3>
+      <div class="brand-catalog" id="brand-catalog"></div>
+      <div class="card sourcing" style="margin-top:14px"><h3>ספקים לבדיקה (סין / OEM)</h3><ul id="brand-sourcing"></ul></div>
+      <div class="warn-box" style="margin-top:14px" id="brand-compliance"></div>
+      <p class="muted" style="margin-top:10px">פירוט מלא: קובץ BRAND.md בריפו.</p>
+    </section>
+  </main>
+  <nav class="bottom-nav" aria-label="ניווט ראשי">
+    <button type="button" data-nav="home" class="active"><span class="ico">🏠</span>בית</button>
+    <button type="button" data-nav="lessons"><span class="ico">📖</span>מדריכים</button>
+    <button type="button" data-nav="mentor"><span class="ico">💬</span>מנטור</button>
+    <button type="button" data-nav="store"><span class="ico">🛍️</span>חנות</button>
+    <button type="button" data-nav="brand"><span class="ico">✨</span>מותג</button>
+  </nav>
+  <script src="brand.js"></script>
+  <script src="products.js"></script>
+  <script src="lessons.js"></script>
+  <script src="mentor.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

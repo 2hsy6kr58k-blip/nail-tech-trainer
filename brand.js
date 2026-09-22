@@ -22,10 +22,10 @@ window.BRAND = {
   catalog: [
     { id: "gel-single", name: "לק ג׳ל גוון Nude Core", desc: "9–15 מ״ל, גווני ניוד/ורוד", priceIls: "34–39 ₪", costNote: "עלות נחיתה משוערת 8–18 ₪" },
     { id: "base-top", name: "בייס + טופ HEMA-free", desc: "זוג פונקציונלי לעבודה יומיומית", priceIls: "39–45 ₪", costNote: "10–22 ₪" },
-    { id: "gel-set6", name: "סט 6 גוונים Premium", desc: "מארז התחלה / מתנה", priceIls: "189–219 ₪", costNote: "55–110 ₪", image: "images/etamar-gel-set.png" },
-    { id: "tips500", name: "ג׳לי טיפס 500 יח׳", desc: "שקד או מרובע, מארז מקצועי", priceIls: "89–109 ₪", costNote: "25–55 ₪", image: "images/etamar-tips-kit.png" },
-    { id: "decor", name: "קיט קישוטים", desc: "אבנים, פויל, גליטר", priceIls: "69–89 ₪", costNote: "15–40 ₪", image: "images/etamar-decor-kit.png" },
-    { id: "tools", name: "סט כלים בסיסי", desc: "פצירה, באפר, פושר, מברשת", priceIls: "79–99 ₪", costNote: "20–45 ₪", image: "images/etamar-tools-set.png" }
+    { id: "gel-set6", name: "סט 6 גוונים Premium", desc: "מארז התחלה / מתנה", priceIls: "189–219 ₪", costNote: "55–110 ₪" },
+    { id: "tips500", name: "ג׳לי טיפס 500 יח׳", desc: "שקד או מרובע, מארז מקצועי", priceIls: "89–109 ₪", costNote: "25–55 ₪" },
+    { id: "decor", name: "קיט קישוטים", desc: "אבנים, פויל, גליטר", priceIls: "69–89 ₪", costNote: "15–40 ₪" },
+    { id: "tools", name: "סט כלים בסיסי", desc: "פצירה, באפר, פושר, מברשת", priceIls: "79–99 ₪", costNote: "20–45 ₪" }
   ],
   sourcing: [
     { name: "YouGel (Foshan)", url: "https://www.fsyougel.com", note: "ספריית צבעים גדולה, private label" },
